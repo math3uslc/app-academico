@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link } from 'react-router-dom'
 import { GlobalProvider } from './context/GlobalContext'
 import FormPage from './pages/FormPage'
 import ListPage from './pages/ListPage'
@@ -7,7 +7,7 @@ import ListPage from './pages/ListPage'
 function App() {
   return (
     <GlobalProvider>
-      <BrowserRouter>
+      <HashRouter>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">App Acadêmico</Link>
@@ -45,7 +45,7 @@ function App() {
             <Route path="/diretor" element={<ListPage role="diretor" />} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </GlobalProvider>
   )
 }
